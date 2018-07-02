@@ -1,0 +1,657 @@
+    1  su
+    2  sudo -i
+    3  su
+    4  apalya01
+    5  su
+    6  sudo snap install pycharm-community --classic
+    7  pycharm-community 
+    8  python --version
+    9  python3 --version
+   10  cd Documents/
+   11  ls
+   12  cd mysite/
+   13  pip install virtualenv
+   14  sudo apt install python-pip
+   15  pip install virtualenv
+   16  virtualenv env_mysite
+   17  source env_mysite/bin/activate
+   18  deactivate 
+   19  pip3 install virtualenv
+   20  sudo apt install python3-pip
+   21  pip3 install virtualenv
+   22  python3 -m virtualenv pms3
+   23  source pms3/bin/activate
+   24  pip install django==1.11.2
+   25  deactivate 
+   26  clear
+   27  pip3 install djongo==1.2.22
+   28  sudo add-apt-repository ppa:jonathonf/python-3.6
+   29  sudo apt-get update
+   30  sudo apt-get install python3.6
+   31  pip install djongo==1.2.22
+   32  sudo apt-get update
+   33  python --version
+   34  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+   35  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+   36  sudo update-alternatives --config python3
+   37  python3 -V
+   38  clear
+   39  deactivate
+   40  python2 -V
+   41  sudo add-apt-repository ppa:jonathonf/python-3.6
+   42  clear
+   43  ls
+   44  cd ..
+   45  ls
+   46  sudo apt-get update 
+   47  cd /hom
+   48  cd Documents/
+   49  git clone https://github.com/ApalyaTechnologies/myplex_pms.git
+   50  sudo apt-get install git
+   51  git config --global user.name "manideep-apalya"
+   52  git config --global user.email "manideep.a@apalya.com"
+   53  git clone https://github.com/ApalyaTechnologies/myplex_pms.git
+   54  cd ..
+   55  sudo add-apt-repository ppa:jonathonf/python-3.6
+   56  python3 -V
+   57  virtualenv -V
+   58  clear
+   59  virtualenv djo
+   60  clear
+   61  pip3 install virtualenv 
+   62  virtualenv djo
+   63  source djo/bin/activate
+   64  pip3 install djongo==1.2.22
+   65  pip3 install djangorestframework==3.8.2
+   66  ls
+   67  db.version()
+   68  mongod --version
+   69  clear
+   70  mongod --version
+   71  ls
+   72  cd djo
+   73  mongod --version
+   74  ls
+   75  cd bin
+   76  mongod --version
+   77  cd ..
+   78  mogod --version
+   79  cd ..
+   80  mogod --version
+   81  ls
+   82  cd myplex_pms/
+   83  ls
+   84  deactivate
+   85  apt-get update 
+   86  sudo apt-get update 
+   87  ls
+   88  cd djo
+   89  cd ..
+   90  ls
+   91  cd djo
+   92  ls
+   93  cd bin
+   94  source activate
+   95  cd ..
+   96  ls
+   97  myplex_pms/
+   98  myplex_pms
+   99  cd myplex_pms/
+  100  ls
+  101  cd myplex_pms_service/
+  102  ls
+  103  cd pms
+  104  ls
+  105  cd ..
+  106  django-admin startproject mysite
+  107  deactivate
+  108  cd djo/bin/
+  109  ls
+  110  activite
+  111  source activate
+  112  cd ..
+  113  clear
+  114  django-admin startproject mysite
+  115  ls
+  116  cd djo/
+  117  cd ..
+  118  django.VERSION
+  119  import django
+  120  django --version
+  121  python
+  122  python3
+  123  clear
+  124  import virtualenv
+  125  exit()
+  126  python
+  127  clear
+  128  cd Documents/
+  129  cd mysite-project/
+  130  virtualenv env_mysite
+  131  ls
+  132  cd env_mysite/
+  133  ls
+  134  source bin/
+  135  ls
+  136  cd bin/
+  137  ls
+  138  source activate
+  139  clear
+  140  pip3 install django==1.11.2
+  141  python
+  142  c ..
+  143  cd ..
+  144  python
+  145  ls
+  146  source env_mysite/bin/activate
+  147  pip3 install django==1.11.2
+  148  clear
+  149  django-admin startproject mysite
+  150  python manage.py runserver
+  151  ls
+  152  python manage.py runserver
+  153  ls
+  154  python manage.py runserver
+  155  deactivate 
+  156  ls
+  157  cd ..
+  158  ls
+  159  cd mysite/
+  160  ls
+  161  cd mysite/
+  162  ls
+  163  cd ..
+  164  ls
+  165  cd env_mysite/
+  166  ls
+  167  cd ..
+  168  source env_mysite/bin/activate
+  169  cd mysite/
+  170  ls
+  171  python manage.py runserver
+  172  ls
+  173  cd ..
+  174  ls
+  175  cd mysite/
+  176  ls
+  177  python manage.py startapp blog
+  178  pip install pytz
+  179  ls
+  180  from django.utils import timezone
+  181  from django.contrib.auth.models import User
+  182  class Post(models.Model):
+  183  STATUS_CHOICES = (
+  184  ('draft', 'Draft'),
+  185  ('published', 'Published'),
+  186  )
+  187  title = models.CharField(max_length=250)
+  188  slug = models.SlugField(max_length=250,
+  189  unique_for_date='publish')
+  190  author = models.ForeignKey(User,
+  191  related_name='blog_posts')
+  192  body = models.TextField()
+  193  publish = models.DateTimeField(default=timezone.now)
+  194  created = models.DateTimeField(auto_now_add=True)
+  195  updated = models.DateTimeField(auto_now=True)
+  196  status = models.CharField(max_length=10,
+  197  choices=STATUS_CHOICES,
+  198  default='draft')
+  199  class Meta:
+  200  ordering = ('-publish',)
+  201  def __str__(self):
+  202  clear
+  203  python manage.py makemigrations blog
+  204  python manage.py sqlmigrate blog 0001
+  205  clear
+  206  python manage.py migrate
+  207  python manage.py createsuperuser
+  208  python manage.py runserver
+  209  ls
+  210  python manage.py runserver
+  211  ls
+  212  cd music/
+  213  ls
+  214  source venv/bin/activate
+  215  ip a
+  216  python manage.py runserver 9000
+  217  python manage.py runserver 
+  218  cd Documents/
+  219  ls
+  220  cd website/
+  221  virtualenv venv
+  222  ls
+  223  source venv/bin/activate
+  224  pip3 install django==1.11.2
+  225  ls
+  226  clear
+  227  django-admin startproject music
+  228  ls
+  229  cd music/
+  230  ls
+  231  python manage.py 
+  232  python manage.py runserver
+  233  clear
+  234  cd .\ho
+  235  cd ..
+  236  deactivate
+  237  cd ..
+  238  clear
+  239  ls
+  240  cd Documents/
+  241  ls
+  242  mkdir djangoproject
+  243  cd djangoproject/
+  244  virtualenv venv
+  245  source venv/bin/activate
+  246  pip3 install django==1.11.2
+  247  django-admin startproject website
+  248  cd website/
+  249  ls
+  250  python manage.py runserver
+  251  cd ..
+  252  deactivate
+  253  ls
+  254  source venv/bin/activate
+  255  ls
+  256  django -
+  257  django -V
+  258  django --version
+  259  clear
+  260  ls
+  261  cd ..
+  262  python3 -m virtualenv pmsenv
+  263  pip3 install virtualenv
+  264  python3 -m virtualenv pmsenv
+  265  pip3 install django==1.11.1
+  266  pip3 install djongo==1.2.22
+  267  pip3 install djangorestframework==3.8.2
+  268  source pmsenv/bin/activate
+  269  pip3 install django==1.11.1
+  270  pip3 install djongo==1.2.22
+  271  pip3 install djangorestframework==3.8.2
+  272  clear
+  273  deactivate
+  274  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+  275  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+  276  sudo apt-get update
+  277  sudo apt-get install -y mongodb-org
+  278  sudo service mongod start
+  279  [initandlisten] waiting for connections on port <port>
+  280  [initandlisten] waiting for connections on port 27017
+  281  sudo rm /var/lib/mongodb/mongod.lock
+  282  sudo mongod --repair
+  283  sudo service mongodb start
+  284  ls
+  285  cd Documents/
+  286  ls
+  287  cd pmsenv/
+  288  ls
+  289  cd lib/
+  290  ls
+  291  cd python3.6/
+  292  ls
+  293  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+  294  echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+  295  sudo apt-get install -y mongodb-org
+  296  > sudo vim /etc/systemd/system/mongodb.service
+  297  systemctl daemon-reload
+  298  netstat -plntu
+  299  mongod --version
+  300  sudo updatedb
+  301  locate mongodb.conf
+  302  locate mongod.conf
+  303  find / -name 'mondo*.conf'
+  304  ls
+  305  cd Documents/
+  306  ls
+  307  cd pmsenv/
+  308  ls
+  309  cd bin/
+  310  ls
+  311  cd ..
+  312  cd lib/
+  313  ls
+  314  cd python3.6/
+  315  ls
+  316  python manage.py runserver
+  317  ls
+  318  pip install pytz
+  319  cd Desktop/
+  320  ls
+  321  cd Doc
+  322  cd ..
+  323  cd Documents/
+  324  ls
+  325  cd pmsenv/
+  326  ls
+  327  source bin/activate
+  328  pip install git+https://github.com/django-nonrel/django@nonrel-1.5
+  329  cd ..
+  330  source pmsenv/bin/activate
+  331  pip install git+https://github.com/django-nonrel/django@nonrel-1.5
+  332  pip install git+https://github.com/django-nonrel/djangotoolbox
+  333  pip install git+https://github.com/django-nonrel/mongodb-engine
+  334  sudo service mongod stop
+  335  sudo service mongod start
+  336  mongo
+  337  python manage.py runserver
+  338  touch requirements.txt
+  339  pip freeze>reqirements.txt
+  340  ls -l requirements.txt 
+  341  cat reqirements.txt 
+  342  clear
+  343  pip freeze > installed.txt
+  344  cd Documents/
+  345  ls
+  346  cd djangoproject/
+  347  ls
+  348  cd website/
+  349  ls
+  350  cd ./
+  351  cd .
+  352  cd ..
+  353  ls
+  354  mkdir projects
+  355  cd projects/
+  356  pip install virtualenv
+  357  virtualenv env
+  358  source env/bin/activate
+  359  pip install django==1.11.2
+  360  pip freeze > reqirements.txt
+  361  pip install djangorestframework
+  362  django-admin startproject djangorest
+  363  python manage.py collectstatic
+  364  cd Documents/
+  365  ls
+  366  cd projects/
+  367  ls
+  368  cd ..
+  369  mkdir task1
+  370  ls
+  371  cd projects/
+  372  ls
+  373  cd ..
+  374  cd Downloads/
+  375  ls
+  376  cd ..
+  377  cd Desktop/
+  378  mkdir myprojects
+  379  virtualenv venv
+  380  source venv/lib/activate
+  381  source venv/bin/activate
+  382  clear
+  383  django-admin startproject task1
+  384  clear
+  385  pip install django==1.11.2
+  386  python --version
+  387  sudo apt-get install python 3.6
+  388  python --version
+  389  sudo apt-get update
+  390  python --version
+  391  sudo apt-get install python 3.6
+  392  apt-mark showhold 
+  393  cd /home/
+  394  ls
+  395  cd apalya/
+  396  ls
+  397  cd PycharmProjects/
+  398  ls
+  399  cd firstproject/
+  400  django-admin startproject task1
+  401  cd ..
+  402  ls
+  403  cd firstproject/
+  404  virtualenv ven
+  405  source ven/bin/activate
+  406  pip3 install django==1.11.2
+  407  pip3 install python==3.6
+  408  sudo apt-get update
+  409  sudo apt-get install python3.6
+  410  python --version
+  411  python3 --version
+  412  django-admin startproject task
+  413  cd task/
+  414  cd ..
+  415  ls
+  416  cd task/
+  417  ls
+  418  python manage.py myapp
+  419  python manage.py startapp myapp
+  420  python manage.py makemigrations
+  421  python manage.py makemigrations myapp
+  422  python manage.py migrate
+  423  python manage.py shell
+  424  python manage.py createsuperuser
+  425  python manage.py runserver
+  426  ped
+  427  pwd
+  428  django -V
+  429  django --version
+  430  clear
+  431  pip freeze > requiremets.txt
+  432  python manage.py runserver
+  433  django-admin makemigrations
+  434  django-admin makemigrations person
+  435  python manage.py makemigrations
+  436  python manage.py migrate
+  437  python manage.py runserver
+  438  git init
+  439  git add .
+  440  git commit -m "My django project"
+  441  git remote add github https://github.com/asaimanideep/django.git
+  442  git remote -v
+  443  git push -f github master 
+  444  python manage.py runserver
+  445  python manage.py createsuperuser
+  446  python manage.py runserver
+  447  python manage.py makemigrations
+  448  python manage.py migrate
+  449  python manage.py runserver
+  450  git init
+  451  git status
+  452  git add .
+  453  git commit -m "new pages"
+  454  git remote add github https://github.com/asaimanideep/django.git
+  455  git remote -v
+  456  git push -f github master 
+  457  python manage.py runserver
+  458  python manage.py makemigrations account
+  459  python manage.py runserver
+  460  ls
+  461  cd PycharmProjects/
+  462  ls
+  463  mkdir auth_project
+  464  cd auth_project/
+  465  django-admin startproject registration
+  466  ls
+  467  cd registration/
+  468  ls
+  469  django-admin startapp account
+  470  ls
+  471  cd account/
+  472  ls
+  473  clear
+  474  sudo -i gedit /etc/hosts
+  475  sudo apt-get install gdebi
+  476  sudo gdebi ~/Downloads/google*
+  477  sudo gdebi google-chrome-stable_current_amd64.deb
+  478  python manage.py runserver
+  479  cd Desktop/
+  480  ls
+  481  cd ..
+  482  ls
+  483  cd PycharmProjects/
+  484  ls
+  485  cd ..
+  486  cd PycharmProjects/
+  487  mkdir env
+  488  virtualenv env/myshop
+  489  source env/myshop/bin/activate
+  490  pip install django=1.8.6
+  491  pip install django==1.8.6
+  492  django-admin startproject myshop
+  493  cd myshop/
+  494  django-admin startapp shop
+  495  sudo add-apt-repository ppa:jonathonf/python-3.6
+  496  sudo apt-get update
+  497  sudo add-apt-repository ppa:jonathonf/python-3.6
+  498  sudo apt-get install python3.6
+  499  sudo add-apt-repository ppa:deadsnakes/ppa
+  500  apt-get install python-apt
+  501  sudo apt-get install python-apt
+  502  sudo add-apt-repository ppa:deadsnakes/ppa
+  503  apt-get remove --purge python-apt
+  504  sudo apt-get remove --purge python-apt
+  505  sudo apt-get install python-apt
+  506  sudo apt-get update
+  507  sudo add-apt-repository ppa:deadsnakes/ppa
+  508  python3 --version 
+  509  deactivate
+  510  pip3 --version
+  511  pip --version
+  512  cd ..
+  513  source env/myshop/bin/activate
+  514  pip3 install django==1.8.6
+  515  deactivate
+  516  pip3 install virtualenv
+  517  virtualenv env/myshop
+  518  source env/myshop/bin/activate
+  519  cd myshop/
+  520  cd ..
+  521  pip3 install django == 1.8.6
+  522  pip3 install django==1.8.6
+  523  cd  myshop/
+  524  mongo
+  525  sudo service mongod start
+  526  git clone https://github.com/manideep-apalya/myplex_pms.git
+  527  cd myplex_pms/
+  528  git status
+  529  git remote -v
+  530  cd ..
+  531  ls
+  532  git clone https://github.com/manideep-apalya/myplex_pms.git
+  533  git status
+  534  cd myplex_pms/
+  535  git status
+  536  git remote add upstream https://github.com/ApalyaTechnologies/myplex_pms.git
+  537  git remote -v
+  538  git status
+  539  git add -A
+  540  git commit -m "swagger added"
+  541  git push
+  542  git status
+  543  git gui
+  544  sudo apt-get install git gui
+  545  git add myplex_pms_service/myplex_pms
+  546  git status
+  547  git commit -m "swagger integration"
+  548  git push
+  549  git branch\
+  550  git branch
+  551  git remote -v
+  552  git remote add upstream https://github.com/ApalyaTechnologies/myplex_pms.git
+  553  git branch -b pms upstream/master
+  554  git remote -v
+  555  git remote add origin https://github.com/manideep-apalya/myplex_pms.git
+  556  cd ..
+  557  git clone https://github.com/manideep-apalya/myplex_pms.git
+  558  cd ../
+  559  cd projects/
+  560  cd ..
+  561  cd project/
+  562  cd Documents/
+  563  ls
+  564  cd Project/
+  565  ls
+  566  cd myplex_pms/
+  567  ls
+  568  git sttus
+  569  git status
+  570  vim .gitignore 
+  571  git rm -r --cached . 
+  572  git status
+  573  git add .
+  574  git status
+  575  clear
+  576  git status
+  577  git commit -m "Removed PYC files"
+  578  git remote
+  579  git branch
+  580  git push origin master 
+  581  git status
+  582  ls
+  583  cd myplex_pms_service/
+  584  ls
+  585  cd ..
+  586  git rm -r --cached myplex_pms_service/static/rest_framework_swagger/favicon-16x16.png 
+  587  git status
+  588  git rm -r --cached myplex_pms_service/static/rest_framework_swagger/favicon-32x32.png 
+  589  git rm -r --cached myplex_pms_service/static/rest_framework_swagger/logo_small.png 
+  590  git reset --hard HEAD
+  591  git stuats
+  592  git status
+  593  clear
+  594  git s
+  595  clear
+  596  git status
+  597  git branch
+  598  cd ..
+  599  cd ../hom
+  600  cd ../home
+  601  cd ..
+  602  cd PycharmProjects/
+  603  ls
+  604  cd myshop/
+  605  ls
+  606  cd ..
+  607  python manage.py startapp cart
+  608  python manage.py runserver
+  609  Rs. {{ cart.get_total_price }}
+  610  python manage.py startapp orders
+  611  python manage.py makemigrations
+  612  python manage.py migrate
+  613  python manage.py runserver
+  614  cd ..
+  615  cd myshop/
+  616  pip install celery==3.1.18
+  617  apt-get install rabbitmq
+  618  sudo apt-get install rabbitmq
+  619  sudo apt-get update
+  620  sudo apt-get install rabbitmq
+  621  sudo apt-get update
+  622  echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
+  623  sudo su -c echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
+  624  sudo nano /etc/apt/sources
+  625  apt get -y upgrade 
+  626  apt-get -y upgrade 
+  627  sudo apt-get -y upgrade 
+  628  sudo apt-get update
+  629  echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
+  630  sudo echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
+  631  cd ..
+  632  sudo su -c echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
+  633  cd PycharmProjects/myshop/
+  634  apt-get install rabbitmq-server 
+  635  sudo apt-get install rabbitmq-server 
+  636  rabbitmq-server 
+  637  sudo rabbitmq-server 
+  638  service rabbitmq-server start
+  639  service rabbitmq-server status
+  640  history
+  641  history > history_for_print.txt
+  642  python manage.py runserver
+  643  pip install flower
+  644  celery -A myshop flower
+  645  cd PycharmProjects/
+  646  ls
+  647  source env/myshop/bin/activate
+  648  cd myshop/
+  649  celery -A myshop worker -l info
+  650  cd PycharmProjects/
+  651  source env/myshop/bin/activate
+  652  cd myshop/
+  653  ls
+  654  python manage.py runserver
+  655  history
+  656  history >new history.txt
+  657  history > new_history.txt
